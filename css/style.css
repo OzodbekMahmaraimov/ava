@@ -38,6 +38,19 @@
   white-space: nowrap;
 }
 
+.blue-description {
+  color: #0057FF;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 /* Main header */
 .header {
   position: fixed;
@@ -168,6 +181,27 @@
   bottom: 6rem;
 }
 
+/* About */
+.about {
+  text-align: center;
+}
+
+.tablet-img {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.about-more {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.about-shape {
+  width: 10rem;
+}
+
 @media only screen and (max-width: 1200px) {
   /* Main section */
   .main {
@@ -250,7 +284,7 @@
     bottom: 0;
   }
   
-  .main-title__author {
-    margin: 0 auto;
+  .main-title__author, .yellow-btn {
+    margin: 0.5rem auto;
   }
 }
