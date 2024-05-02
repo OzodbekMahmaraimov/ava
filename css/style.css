@@ -362,7 +362,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 4rem 0;
+  margin: 8rem 0;
 }
 
 .blog > img {
@@ -416,7 +416,7 @@
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 680px;
   gap: 4rem;
-  margin: 4rem 0;
+  margin: 8rem 0;
 }
 
 .marketing-title {
@@ -496,7 +496,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4rem 0;
+  margin: 8rem 0;
   position: relative;
 }
 
@@ -529,10 +529,22 @@
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
   gap: 16px;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: 0;
+  scroll-behavior: smooth;
+}
+
+.testimonial-carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.testimonial-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .testimonial-carousel__card {
+  scroll-snap-align: start;
   border: 1px solid #e7e7e7;
   border-radius: 5px;
   height: 400px;
@@ -546,6 +558,16 @@
   cursor: pointer;
 }
 
+.testimonial-carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.testimonial-carousel.dragging .testimonial-carousel__card {
+  cursor: grab;
+  user-select: none;
+}
+
 .carousel-card__img {
   width: 140px;
 }
@@ -553,6 +575,38 @@
 .name,
 .job {
   font-weight: 400;
+}
+
+/* Marketing template */
+.marketing-template {
+  margin: 8rem 0;
+  height: 30rem;
+}
+
+.marketing-template__bg {
+  background: url(/assets/marketingtemp.png) no-repeat center;
+  height: 100%;
+  width: 50%;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.marketing-template__title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.marketing-template__action {
+  background-color: #0057ff;
+}
+
+.marketing-template__action:hover {
+  background-color: #3a86ff;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -632,6 +686,7 @@
   /* Main section */
   #main {
     margin-top: 4rem;
+    margin: 4rem 0;
   }
 
   .main {
@@ -658,6 +713,7 @@
   /* About */
   .about {
     padding: 2rem 1rem;
+    margin: 4rem 0;
   }
 
   .about-title p {
@@ -676,6 +732,7 @@
     text-align: center;
     padding: 0 0.1rem;
     row-gap: 3rem;
+    margin: 4rem 0;
   }
   .pricing__description {
     grid-column: 1 / span 1;
@@ -694,6 +751,7 @@
     row-gap: 1rem;
     text-align: center;
     padding: 0 0.5rem;
+    margin: 4rem 0;
   }
 
   .blog > img {
@@ -713,6 +771,7 @@
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
     padding: 0 0.5rem;
+    margin: 4rem 0;
   }
 
   .marketing-title,
@@ -728,6 +787,19 @@
   /* Testimonial section */
   .testimonial-carousel {
     grid-auto-columns: 100%;
+  }
+  
+  .testimonial > i {
+    display: none;
+  }
+
+  /* Marketing template */
+  .marketing-template {
+    padding: 0 0.5rem;
+    margin: 4rem 0;
+  }
+  .marketing-template__bg {
+    width: 100%;
   }
 }
 
