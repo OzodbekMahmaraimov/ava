@@ -99,6 +99,21 @@
   width: 72%;
 }
 
+.arrow {
+  height: 50px;
+  width: 50px;
+  background: #fafafa;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 1.25rem;
+  transform: translateY(-50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 /* Main header */
 .header {
   position: fixed;
@@ -500,21 +515,6 @@
   position: relative;
 }
 
-.testimonial > i {
-  height: 50px;
-  width: 50px;
-  background: #fafafa;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  font-size: 1.25rem;
-  transform: translateY(-50%);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
 .testimonial > i:first-child {
   left: -22px;
 }
@@ -580,7 +580,7 @@
 /* Marketing template */
 .marketing-template {
   margin: 8rem 0;
-  height: 30rem;
+  height: 25rem;
 }
 
 .marketing-template__bg {
@@ -607,6 +607,30 @@
 
 .marketing-template__action:hover {
   background-color: #3a86ff;
+}
+
+/* Partners */
+.partners {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 3rem;
+  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
+  padding: 2.5rem 0;
+  position: relative;
+}
+
+.partners > .arrow:first-child {
+  left: -22px;
+}
+
+.partners > .arrow:last-child {
+  right: -22px;
+}
+
+.partner-logo {
+  width: 100%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -639,7 +663,7 @@
 @media only screen and (max-width: 768px) {
   /* Core style */
   .heading {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   /* Main header */
@@ -741,6 +765,10 @@
   .pricing__contact {
     grid-column: 1 / span 1;
   }
+  .service {
+    grid-template-columns: auto;
+    gap: 1rem;
+  }
   .service img {
     margin: 0 auto;
   }
@@ -788,7 +816,7 @@
   .testimonial-carousel {
     grid-auto-columns: 100%;
   }
-  
+
   .testimonial > i {
     display: none;
   }
@@ -796,10 +824,20 @@
   /* Marketing template */
   .marketing-template {
     padding: 0 0.5rem;
-    margin: 4rem 0;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    height: 20rem;
   }
   .marketing-template__bg {
     width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Partners */
+  .partners {
+    margin: 1.5rem 0;
+    padding: 0 0.5rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -810,5 +848,10 @@
   }
   .contact-img {
     height: 200px;
+  }
+
+  /* Partners */
+  .partners {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
