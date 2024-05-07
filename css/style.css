@@ -908,6 +908,11 @@
     display: block;
   }
 
+  /* Loader */
+  .loader {
+    width: 90%;
+  }
+
   /* Main section */
   #main {
     margin-top: 4rem;
@@ -1060,6 +1065,11 @@
 }
 
 @media only screen and (max-width: 480px) {
+  /* Loader */
+  .loader {
+    width: 100%;
+  }
+
   /* Pricing */
   .service > div {
     width: 100%;
