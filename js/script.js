@@ -108,4 +108,12 @@ document.addEventListener("DOMContentLoaded", function () {
   carousel.addEventListener("scroll", infiniteScroll);
   wrapper.addEventListener("mouseenter", () => clearTimeout(timeOutId));
   wrapper.addEventListener("mouseleave", autoPlay);
+
+  // Loader
+  let loader = document.querySelector(".loader-container");
+
+  setTimeout(() => {
+    loader.classList.add("hidden")
+    loader.classList.remove("flex")
+  }, 1500)
 });

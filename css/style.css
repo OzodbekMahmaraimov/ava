@@ -122,6 +122,25 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+/* Loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+  background-color: white;
+}
+
+.loader {
+  width: 40%;
+  user-select: none;
+  pointer-events: none;
+}
+
 /* Main header */
 .header {
   position: fixed;
