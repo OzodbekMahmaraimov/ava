@@ -11,12 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   accordionHeaders.forEach(function (header) {
     header.addEventListener("click", function () {
-      this.nextElementSibling.classList.toggle("h-0");
-
       let plusMinusIcon = this.querySelector(".faq-plus");
       if (plusMinusIcon.textContent === "+") {
+        this.nextElementSibling.classList.add("block")
+        this.nextElementSibling.classList.remove("hidden")
         plusMinusIcon.textContent = "-";
       } else {
+        this.nextElementSibling.classList.add("hidden")
+        this.nextElementSibling.classList.remove("block")
         plusMinusIcon.textContent = "+";
       }
     });

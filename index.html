@@ -215,13 +215,13 @@
           </p>
           <div class="faq-accordions">
             <div class="faq-accordion">
-              <div onclick="openFaq()" class="faq-header">
+              <div class="faq-header">
                 <h3 class="faq-heading font-oswald">
                   Do you provide customer support?
                 </h3>
                 <h2 class="faq-plus">+</h2>
               </div>
-              <div class="faq-body h-0">
+              <div class="faq-body hidden">
                 <p class="title">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
                   reiciendis earum laudantium voluptas incidunt voluptate
@@ -230,13 +230,13 @@
               </div>
             </div>
             <div class="faq-accordion">
-              <div onclick="openFaq()" class="faq-header">
+              <div class="faq-header">
                 <h3 class="faq-heading font-oswald">
                   Do you provide customer support?
                 </h3>
                 <h2 class="faq-plus">+</h2>
               </div>
-              <div class="faq-body h-0">
+              <div class="faq-body hidden">
                 <p class="title">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
                   reiciendis earum laudantium voluptas incidunt voluptate
@@ -245,13 +245,13 @@
               </div>
             </div>
             <div class="faq-accordion">
-              <div onclick="openFaq()" class="faq-header">
+              <div class="faq-header">
                 <h3 class="faq-heading font-oswald">
                   Do you provide customer support?
                 </h3>
                 <h2 class="faq-plus">+</h2>
               </div>
-              <div class="faq-body h-0">
+              <div class="faq-body hidden">
                 <p class="title">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
                   reiciendis earum laudantium voluptas incidunt voluptate
@@ -510,15 +510,90 @@
     </div>
     <!-- /Partners -->
 
-    <!-- Recent -->
-    <section id="blog">
-      <h1>Blog</h1>
-    </section>
-    <!-- /Recent -->
+    <!-- Blog recent -->
+    <div class="container">
+      <section class="blog-recent" id="blog-recent">
+        <div class="blog-recent__description">
+          <h4 class="blue-description font-oswald">FROM OUR BLOG</h4>
+          <h2 class="heading font-oswald">Recent News & Updates</h2>
+        </div>
+        <div class="blog-recent__courses">
+          <div class="blog-recent__course course__one">
+            <img src="assets/blog2.jpg" alt="blog 1" />
+            <div class="course-title">
+              <h4 class="blue-description font-oswald">Design</h4>
+              <h3 class="font-oswald text-uppercase">
+                Best Blogs To Follow About Web Design
+              </h3>
+              <p class="font-roboto">
+                Et magni et ea unde tempore. Corrupti quia adipisci qui dicta
+                sint.
+              </p>
+            </div>
+          </div>
+
+          <div class="blog-recent__course course__two">
+            <img src="assets/blog3.jpg" alt="blog 2" />
+            <div class="course-two__title">
+              <h4 class="blue-description font-oswald">MARKETING</h4>
+              <h2 class="font-oswald">
+                What Will Website Be Like In 100 Years?
+              </h2>
+            </div>
+          </div>
+
+          <div class="blog-recent__course course__three">
+            <img src="assets/blog1.jpg" alt="blog 3" />
+            <div class="course-title">
+              <h4 class="blue-description font-oswald">TUTORIAL</h4>
+              <h3 class="font-oswald text-uppercase">
+                5 Great Web Design Resources
+              </h3>
+              <p class="font-roboto">
+                Et magni et ea unde tempore. Corrupti quia adipisci qui dicta
+                sint.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- /Blog recent -->
 
     <!-- Footer -->
-    <footer id="footer">
-      <h1>Footer</h1>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <nav class="footer-nav">
+          <a href="index.html">
+            <img
+              class="footer-logo"
+              src="assets/footer-logo.png"
+              alt="Footer Logo"
+            />
+          </a>
+          <ul class="footer-lists font-oswald text-uppercase">
+            <li class="footer-list">Style-guide</li>
+            <li class="footer-list">Licenses</li>
+            <li class="footer-list">Changelog</li>
+            <li class="footer-list">Terms</li>
+            <li class="footer-list">Password</li>
+            <li class="footer-list">404</li>
+          </ul>
+        </nav>
+        <div class="footer-links">
+          <h4 class="font-oswald text-uppercase">
+            <span class="text-gray">Created with love by</span>
+            <span>Dorian Hoxha</span> |
+            <span class="text-gray">Powered by</span> <span>Webflow</span>
+          </h4>
+          <div class="footer-links__social">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-pinterest"></i>
+            <i class="bi bi-linkedin"></i>
+          </div>
+        </div>
+      </div>
     </footer>
     <!-- /Footer -->
 
